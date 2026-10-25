@@ -73,7 +73,7 @@ def render_fng_cadence():
 
     st.sidebar.header("Strategy Settings")
     cadence_len = st.sidebar.number_input("Cadence Lookback (Days)", value=90, min_value=14, max_value=200, key="fng_cadence_len")
-    smooth_len = st.sidebar.number_input("Cadence Smoothing (EMA Days)", value=14, min_value=3, max_value=None, key="fng_smooth_len")
+    smooth_len = st.sidebar.number_input("Cadence Smoothing (EMA Days)", value=90, min_value=3, max_value=None, key="fng_smooth_len")
     ma_len = st.sidebar.number_input("Trend Filter (SMA)", value=200, min_value=50, max_value=300, key="fng_ma_len")
     
     fng_df = get_historical_fng()
